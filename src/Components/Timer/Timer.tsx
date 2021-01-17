@@ -2,10 +2,10 @@ import React from 'react';
 import './timer.style.css'
 
 type Props = {
-    timer : {
-        hourFormat: number,
-        minuteFormat : number,
-        secondFormat : number
+    timer: {
+        hourFormat?: number,
+        minuteFormat?: number,
+        secondFormat?: number
     },
 }
 
