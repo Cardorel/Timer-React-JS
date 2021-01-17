@@ -24,7 +24,7 @@ const Buttons : React.FC = (props: Props) => {
           Start
         </button>
       )}
-      <button className="btn btn-wait" onDoubleClick={waitBtn}>
+      <button className="btn btn-wait" onClick={waitBtn}>
         Wait
       </button>
       <button className="btn btn-reset" onClick={resetBtn}>
