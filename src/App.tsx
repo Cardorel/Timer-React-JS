@@ -8,16 +8,15 @@ import Timer from "./Components/Timer/Timer";
 
 function App(): JSX.Element {
   let caller : {observable$ : any, start : Function , stop : Function} = Rjx_timer(1000);
-  const [timeInSecond, setTimeInSecond] = useState<number | string>(0);
   const [timer, setTimer] = useState<{}>({});
   const [isStartCompleted, setIsStartCompleted] = useState<Boolean>(false);
   const [isDisabled , setIsDisabled] = useState<Boolean | undefined>(false);
   let [cleanInterval, setCleanInterval] = useState<any>();
 
   useEffect(() => {
-    let timerObject = CalculateTimer(+timeInSecond);
+    let timerObject = CalculateTimer(0);
     setTimer(timerObject);
-  }, [timeInSecond]);
+  }, []);
 
   //Start
   const HandleStartBtn = (): void => {
@@ -26,7 +25,7 @@ function App(): JSX.Element {
       if(value != null)
       {
         setIsStartCompleted(true);
-        let timerObject = CalculateTimer(setTimeInSecond(value));
+        let timerObject = CalculateTimer(value);
         setTimer(timerObject);
         caller.start();
       }
