@@ -1,6 +1,5 @@
 import React, { useState, useEffect, memo } from "react";
-import { asyncScheduler } from "rxjs";
-import { filter, publishLast, throttleTime , share } from "rxjs/operators";
+import { filter, throttleTime , share } from "rxjs/operators";
 import "./App.css";
 import Buttons from "./Components/Buttons/Buttons";
 import CalculateTimer from "./Components/Timer/CalculateTimer";
@@ -16,7 +15,7 @@ function App(): JSX.Element {
   let [cleanInterval, setCleanInterval] = useState<any>();
 
   useEffect(() => {
-    let timerObject: {} = CalculateTimer(timeInSecond);
+    let timerObject = CalculateTimer(timeInSecond);
     setTimer(timerObject);
   }, [timeInSecond]);
 
