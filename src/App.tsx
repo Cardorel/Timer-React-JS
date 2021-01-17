@@ -41,7 +41,7 @@ function App(): JSX.Element {
   const HandleWaitBtn = (): void => {
     setIsStartCompleted(false);
     caller.observable$.pipe(
-      throttleTime(400))
+      throttleTime(300))
     .subscribe(() => {
       cleanInterval.unsubscribe()
       setIsDisabled(false)
