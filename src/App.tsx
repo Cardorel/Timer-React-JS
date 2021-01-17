@@ -15,7 +15,7 @@ function App(): JSX.Element {
   let [cleanInterval, setCleanInterval] = useState<any>();
 
   useEffect(() => {
-    let timerObject = CalculateTimer(timeInSecond);
+    let timerObject = CalculateTimer(+timeInSecond);
     setTimer(timerObject);
   }, [timeInSecond]);
 
