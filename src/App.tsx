@@ -9,8 +9,8 @@ import Timer from "./Components/Timer/Timer";
 function App(): JSX.Element {
   let caller : {observable$ : any, start : Function , stop : Function} = Rjx_timer(1000);
   const [timer, setTimer] = useState<{}>({});
-  const [isStartCompleted, setIsStartCompleted] = useState<Boolean>(false);
-  const [isDisabled , setIsDisabled] = useState<Boolean | undefined>(false);
+  const [isStartCompleted, setIsStartCompleted] = useState<boolean>(false);
+  const [isDisabled , setIsDisabled] = useState<boolean | undefined>(false);
   let [cleanInterval, setCleanInterval] = useState<any>();
 
   useEffect(() => {
