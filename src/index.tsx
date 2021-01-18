@@ -2,12 +2,12 @@ import React , {lazy , Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const Gobal_App = lazy(() => import('./App'));
+const GobalApp = lazy(() => import('./App'));
 
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback={<h1>Loading...</h1>}>
-      <Gobal_App/>
+      <GobalApp/>
     </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
