@@ -2,15 +2,15 @@ import React from "react";
 import "./Button.style.css";
 
 type Props = {
-  startBtn?: any;
-  waitBtn?: any;
-  resetBtn?: any;
-  stopBtn?: any;
+  startBtn: any;
+  waitBtn: any;
+  resetBtn: any;
+  stopBtn: any;
   isStartCompleted: boolean;
-  isDisabled?: boolean | undefined;
+  isDisabled: boolean | undefined;
 };
 
-const Buttons : React.FC = (props: Props) => {
+const Buttons = (props: Props) => {
   const { startBtn, waitBtn, resetBtn, stopBtn, isStartCompleted , isDisabled} = props;
 
   return (
